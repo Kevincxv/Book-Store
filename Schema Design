@@ -1,0 +1,36 @@
+-- Products table
+CREATE TABLE Products (
+    ProductID SERIAL PRIMARY KEY,
+    ProductName VARCHAR(255),
+    Price DECIMAL,
+    Stock INT
+);
+
+-- Customers table
+CREATE TABLE Customers (
+    CustomerID SERIAL PRIMARY KEY,
+    CustomerName VARCHAR(255),
+    ContactInfo VARCHAR(255)
+);
+
+-- Orders table
+CREATE TABLE Orders (
+    OrderID SERIAL PRIMARY KEY,
+    CustomerID INT REFERENCES Customers(CustomerID),
+    ProductID INT REFERENCES Products(ProductID),
+    Quantity INT,
+    OrderDate DATE
+);
+
+-- Inserting sample data
+INSERT INTO Products (ProductName, Price, Stock) VALUES
+('Product A', 20.00, 100),
+('Product B', 15.00, 200);
+
+INSERT INTO Customers (CustomerName, ContactInfo) VALUES
+('Customer 1', 'contact1@example.com'),
+('Customer 2', 'contact2@example.com');
+
+INSERT INTO Orders (CustomerID, ProductID, Quantity, OrderDate) VALUES
+(1, 1, 3, '2023-10-15'),
+(2, 2, 2, '2023-10-16');
