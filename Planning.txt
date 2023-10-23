@@ -1,2 +1,0 @@
-Enterprise Selection: Retail Management System
-DBMS: PostgreSQL
