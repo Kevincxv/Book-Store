@@ -1,18 +1,12 @@
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.math.BigDecimal;
-
 public class OrderService {
 
     public void placeOrder(int userID, int bookID, int quantity) {
         // Fetch the book price first
         String priceQuery = "SELECT price FROM Books WHERE bookID = ?";
-        BigDecimal bookPrice = null;
+        BigDecimal bookPrice;
 
         try (Connection conn = DatabaseConnection.getConnection();
-                PreparedStatement priceStmt = conn.prepareStatement(priceQuery)) {
+             PreparedStatement priceStmt = conn.prepareStatement(priceQuery)) {
             priceStmt.setInt(1, bookID);
             try (ResultSet rs = priceStmt.executeQuery()) {
                 if (rs.next()) {

@@ -1,5 +1,4 @@
 import java.awt.print.Book;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,20 +24,5 @@ public class BookService {
             e.printStackTrace();
         }
         return books;
-    }
-   public class Book {
-        private int bookID;
-        private String title;
-        private String author;
-        private BigDecimal price;
-        private int stock;
-
-        public Book(int bookID, String title, String author, BigDecimal price, int stock) {
-            this.bookID = bookID;
-            this.title = title;
-            this.author = author;
-            this.price = price;
-            this.stock = stock;
-        }
     }
 }
