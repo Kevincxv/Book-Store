@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>All Users</h2>
+<ul class="list-group">
+{% for user in users %}
+    <li class="list-group-item">{{ user.Name }} ({{ user.Email }})</li>
+{% endfor %}
+</ul>
+{% endblock %}
