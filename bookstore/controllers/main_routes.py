@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
-from bookstore.models import db
-from bookstore.models.user import User
-from bookstore.models.book import Book
-from bookstore.models.order import Order
+from models import db
+from models.user import User
+from models.book import Book
+from models.order import Order
 from werkzeug.security import check_password_hash, generate_password_hash
 
 main = Blueprint('main', __name__)

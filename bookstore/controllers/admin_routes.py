@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from bookstore.models.book import Book
-from bookstore.models import db
+from models.book import Book
+from models import db
 
 admin = Blueprint('admin', __name__)
 

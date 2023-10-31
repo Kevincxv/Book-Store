@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from bookstore.models.user import User
-from bookstore.models import db
+from models.user import User
+from models import db
 
 user = Blueprint('user', __name__)
 
