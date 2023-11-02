@@ -8,6 +8,7 @@ from config import Config
 from controllers.main_routes import main
 from controllers.user_routes import user
 from controllers.admin_routes import admin
+from controllers.main_routes import main
 
 def create_app():
     app = Flask(__name__)
@@ -18,6 +19,7 @@ def create_app():
     # Register blueprints
     app.register_blueprint(user, url_prefix='/user')
     app.register_blueprint(admin, url_prefix='/admin')
+    app.register_blueprint(main)
 
     return app
 
