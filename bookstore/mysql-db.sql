@@ -46,3 +46,27 @@ BEGIN
     UPDATE Books SET Stock = Stock - quantity_sold WHERE BookID = book_id;
 END //
 DELIMITER ;
+
+
+INSERT INTO Users (Password, Name, Email, UserType) VALUES ('password1', 'User1', 'user1@example.com', 'Customer');
+INSERT INTO Users (Password, Name, Email, UserType) VALUES ('password2', 'User2', 'user2@example.com', 'Customer');
+INSERT INTO Users (Password, Name, Email, UserType) VALUES ('password3', 'User3', 'user3@example.com', 'Customer');
+INSERT INTO Users (Password, Name, Email, UserType) VALUES ('password4', 'User4', 'user4@example.com', 'Customer');
+INSERT INTO Users (Password, Name, Email, UserType) VALUES ('password5', 'User5', 'user5@example.com', 'Customer');
+
+INSERT INTO Books (Title, Author, Price, Stock) VALUES ('Book Title 1', 'Author 1', 11, 6);
+INSERT INTO Books (Title, Author, Price, Stock) VALUES ('Book Title 2', 'Author 2', 12, 7);
+INSERT INTO Books (Title, Author, Price, Stock) VALUES ('Book Title 3', 'Author 3', 13, 8);
+INSERT INTO Books (Title, Author, Price, Stock) VALUES ('Book Title 4', 'Author 4', 14, 9);
+INSERT INTO Books (Title, Author, Price, Stock) VALUES ('Book Title 5', 'Author 5', 15, 10);
+
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (2, 2, 2);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (3, 3, 3);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (4, 4, 1);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (5, 5, 2);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (1, 1, 3);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (2, 2, 1);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (3, 3, 2);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (4, 4, 3);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (5, 5, 1);
+INSERT INTO Orders (UserID, BookID, Quantity) VALUES (1, 1, 2);
