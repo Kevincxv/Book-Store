@@ -1,16 +1,16 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h2>My Orders</h2>
+<h2>All Orders</h2>
 <ul class="list-group">
 {% for order in orders %}
     <li class="list-group-item">
-        Book ID: {{ order.BookID }} | Quantity: {{ order.Quantity }}
+        Book ID: {{ order.Order.BookID }} | Quantity: {{ order.Order.Quantity }} | User: {{ order.User.Email }}
     </li>
 {% endfor %}
 {% if not orders %}
     <li class="list-group-item">
-        You have no orders yet.
+        There have been no orders yet.
     </li>
 {% endif %}
 </ul>

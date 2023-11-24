@@ -6,3 +6,4 @@ class Book(db.Model):
     Author = db.Column(db.String(255))
     Price = db.Column(db.Float)
     Stock = db.Column(db.Integer)
+    OutOfPrint = db.Column(db.Boolean)

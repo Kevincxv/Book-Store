@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>Add Book</h2>
-<form action="{{ url_for('add_book') }}" method="post">
+<form action="{{ url_for('book.add_book') }}" method="post">
     <div class="form-group">
         <label>Title:</label>
         <input type="text" class="form-control" name="title" required>
